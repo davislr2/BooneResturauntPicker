@@ -28,8 +28,9 @@ function pickBooneRestaurant() {
     var keys = Object.keys(optionsByRange[priceRange]);
     var randomIndex = Math.floor(Math.random() * keys.length);
     var randomKey = keys[randomIndex];
+    var dict = optionsByRange[priceRange];
     
     document.getElementById("rangeBox").textContent = "Your chosen price range is: " + priceRange;
 
-    document.getElementById("resultBox").textContent = "Your randomly chosen Boone restaurant is: " + randomKey + ". " + optionsByRange[priceRange][randomKey];
+    document.getElementById("resultBox").textContent = "Your randomly chosen Boone restaurant is: " + randomKey + ". " + dict[randomKey];
 }
