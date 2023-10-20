@@ -11,7 +11,10 @@ function pickBooneRestaurant() {
     var keys = Object.keys(options)
     var randomIndex = Math.floor(Math.random() * keys.length)
     var randomKey = keys[randomIndex]
+    var priceRange = document.getElementById("priceRange").value
+    document.getElementById("rangeBox").textContent = "Your chosen price range is: " + priceRange;
+
     document.getElementById("resultBox").textContent 
-                        = "Randomly Picked: Your randomly chosen Boone restaurant is: "
+                        = "Your randomly chosen Boone restaurant is: "
                         + randomKey + ". " + options[randomKey];
 }
