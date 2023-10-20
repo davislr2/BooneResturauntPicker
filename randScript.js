@@ -22,15 +22,14 @@ function pickBooneRestaurant() {
         "Moderate": moderate,
         "Expensive": expensive
     }
-    var priceRange = document.getElementById("priceRange").value;
-
-    var keys = Object.keys(optionsByRange[priceRange])
-    var randomIndex = Math.floor(Math.random() * keys.length)
-    var randomKey = keys[randomIndex]
     
     var priceRange = document.getElementById("priceRange").value;
+
+    var keys = Object.keys(optionsByRange[priceRange]);
+    var randomIndex = Math.floor(Math.random() * keys.length);
+    var randomKey = keys[randomIndex];
+    
     document.getElementById("rangeBox").textContent = "Your chosen price range is: " + priceRange;
 
-    document.getElementById("resultBox").textContent = "Your randomly chosen Boone restaurant is: " + randomKey + ". " + options[randomKey];
+    document.getElementById("resultBox").textContent = "Your randomly chosen Boone restaurant is: " + randomKey + ". " + optionsByRange[priceRange][randomKey];
 }
-
