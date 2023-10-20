@@ -18,9 +18,9 @@ function pickBooneRestaurant() {
     }
 
     var optionsByRange = {
-        "cheap": cheap,
-        "moderate": moderate,
-        "expensive": expensive
+        "Cheap": cheap,
+        "Moderate": moderate,
+        "Expensive": expensive
     }
     var priceRange = document.getElementById("priceRange").value;
 
