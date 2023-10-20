@@ -1,3 +1,4 @@
+var previousRestaurant = null;
 function pickBooneRestaurant() {
     var cheap = { 
         "Chick-Fil-A": "2.0 Miles From Campus",
@@ -26,11 +27,18 @@ function pickBooneRestaurant() {
     var priceRange = document.getElementById("priceRange").value;
 
     var keys = Object.keys(optionsByRange[priceRange]);
-    var randomIndex = Math.floor(Math.random() * keys.length);
-    var randomKey = keys[randomIndex];
     var dict = optionsByRange[priceRange];
-    
-    document.getElementById("rangeBox").textContent = "Your chosen price range is: " + priceRange;
+    var randomKey;
 
-    document.getElementById("resultBox").textContent = "Your randomly chosen Boone restaurant is: " + randomKey + ". " + dict[randomKey];
+    do {
+        randomKey = keys[Math.floor(Math.random() * keys.length)];
+    } while (randomKey === previousRestaurant);
+
+    previousRestaurant = randomKey;
+    
+    document.getElementById("rangeBox").textContent =
+                 "Your chosen price range is: " + priceRange;
+
+    document.getElementById("resultBox").textContent = 
+                "Your randomly chosen Boone restaurant is: " + randomKey + ". " + dict[randomKey];
 }
