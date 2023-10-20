@@ -1,4 +1,12 @@
 var previousRestaurant = null;
+
+function randomizeArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function pickBooneRestaurant() {
     var cheap = { 
         "Chick-Fil-A": "2.0 Miles From Campus",
@@ -24,17 +32,18 @@ function pickBooneRestaurant() {
         "Expensive": expensive
     }
     
-    var priceRange = document.getElementById("priceRange").value;
+    if (!shuffledOptions.length) {
+        priceRange = document.getElementById("priceRange").value;
+        shuffledOptions = Object.keys(optionsByRange[priceRange]);
+        randomizeArray(shuffledOptions);
+    }
 
-    var keys = Object.keys(optionsByRange[priceRange]);
-    var dict = optionsByRange[priceRange];
-    var randomKey;
+    if (!shuffledOptions.length) {
+        shuffledOptions = Object.keys(optionsByRange[priceRange]);
+        randomizeArray(shuffledOptions);
+    }
 
-    do {
-        randomKey = keys[Math.floor(Math.random() * keys.length)];
-    } while (randomKey === previousRestaurant);
-
-    previousRestaurant = randomKey;
+    var randomKey = shuffledOptions.pop();
     
     document.getElementById("rangeBox").textContent =
                  "Your chosen price range is: " + priceRange;
