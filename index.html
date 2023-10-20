@@ -7,9 +7,16 @@
 </head>
 <body>
     <h1> Boone Resturaunt Picker </h1>
+    <select name= "priceRange" id="priceRange">
+        <option value = "1"> Cheap </option>
+        <option value = "2"> Moderate </option>
+        <option value = "3"> Expensive </option>
+    </select>
     <p id="resultBox"> Your randomly chosen Boone resturaunt is: <br> </p>
-    <button onclick="pickBooneRestaurant()"> Choose Restauraunt </button>
+    <p id="rangeBox">  Your chosen price range is: <br> </p>
 
+    <button onclick="pickBooneRestaurant()"> Choose Restauraunt </button>
 <script src="randScript.js"></script>
 </body>
 </html>
+
