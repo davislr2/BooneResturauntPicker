@@ -11,7 +11,7 @@ function pickBooneRestaurant() {
     var keys = Object.keys(options)
     var randomIndex = Math.floor(Math.random() * keys.length)
     var randomKey = keys[randomIndex]
-    document.getElementById("result").textContent 
+    document.getElementById("resultBox").textContent 
                         = "Randomly Picked: Your randomly chosen Boone restaurant is: "
                         + randomKey + ". " + options[randomKey];
 }
