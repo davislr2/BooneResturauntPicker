@@ -1,4 +1,4 @@
-function pickBooneResturaunt() {
+function pickBooneRestaurant() {
     var options = { "Boone Saloon" : "0.5 Miles From Campus",
                     "Macados" : "0.5 Miles From Campus",
                     "Tapp Room" : "0.5 Miles From Campus",
@@ -12,6 +12,6 @@ function pickBooneResturaunt() {
     var randomIndex = Math.floor(Math.random() * keys.length)
     var randomKey = keys[randomIndex]
     document.getElementById("result").textContent 
-                        = "Randomly Picked: Your randomly chosen Boone resturaunt is: "
+                        = "Randomly Picked: Your randomly chosen Boone restaurant is: "
                         + randomKey + ". " + options[randomKey];
 }
