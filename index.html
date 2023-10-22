@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
+<head>
     <title>Boone Restaurant Picker</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+    }
+
+    h1 {
+        font-size: 50px;
+        color: #000000;
+    }
+
+    select {
+        font-size: 20px;
+        color: #000000;
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    p {
+        font-size: 20px;
+        color: #000000;
+    }
+
+    button {
+        font-size: 20px;
+        color: #000000;
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    button:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+</style>
 
 <body>
     <h1>Boone Restaurant Picker</h1>
@@ -15,8 +55,9 @@
     <p id="rangeBox">Your chosen price range is:<br></p>
     <p id="resultBox">Your randomly chosen Boone restaurant is:<br></p>
 
-    
+
     <button onclick="pickBooneRestaurant()">Choose Restaurant</button>
     <script src="randScript.js"></script>
 </body>
+
 </html>
