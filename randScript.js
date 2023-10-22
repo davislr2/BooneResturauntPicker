@@ -54,7 +54,7 @@ function pickBooneRestaurant() {
                  "Your chosen price range is: " + priceRange;
 
     document.getElementById("resultBox").textContent = 
-                "Your randomly chosen Boone restaurant is: " + randomKey + ". " + optionsByRange[priceRange][randomKey];
+                "Your randomly chosen Boone restaurant is: \n" + randomKey + ". " + optionsByRange[priceRange][randomKey];
 
     document.getElementById("restaurantImage").src = "images/" + randomKey + ".jpeg";
 
